@@ -63,12 +63,17 @@ namespace Project1
 
             public Base2(String PvtMember, String PrtdMember)
             {
-                PvtMember = DataMember1;
-                PrtdMember = DataMember2;
+                DataMember1=PvtMember;
+                DataMember2=PrtdMember;
             }
             public void Print()
             {
-                Console.WriteLine("\nThis is overriden method in base class.");
+                Console.WriteLine($"\nThis is overriden method in base class.\n{DataMember1}");
+            }
+            public void PvtAccess()
+            {
+                String data = DataMember1;
+                Console.WriteLine(data);
             }
 
         }
@@ -80,7 +85,7 @@ namespace Project1
             }
             public void Print()
             {
-                Console.WriteLine("This is overriding method in sub class.");
+                Console.WriteLine($"This is overriding method in sub class.\n{DataMember2}");
             }
 
         }
@@ -152,6 +157,7 @@ namespace Project1
 
             Sub2 s2 = new Sub2("Private Member","Protected Member");
             s2.Print(); //Method Overriding
+            s2.PvtAccess();
 
             Base2 b2 = new Base2("Private Member", "Protected Member");
             b2.Print(); //Private Member
