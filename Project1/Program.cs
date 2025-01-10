@@ -13,7 +13,7 @@ namespace Project1
 
         //Static 
 
-        static String var1 = "This is Static Variable."; //Static Variable
+        static String var1 = "This is Static Variable. "; //Static Variable
         String var2 = "This is non-static variable."; //Non-static Variable
         static void Method1() //Static Method
         {
